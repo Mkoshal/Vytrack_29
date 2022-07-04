@@ -18,4 +18,7 @@ public class VyTrackLoginPage {
     @FindBy(name = "_password")
     public WebElement password;
 
+    @FindBy(name = "_submit")
+    public WebElement submit;
+
 }
