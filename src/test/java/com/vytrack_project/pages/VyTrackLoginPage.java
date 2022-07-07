@@ -21,4 +21,13 @@ public class VyTrackLoginPage {
     @FindBy(name = "_submit")
     public WebElement submit;
 
+
+    public void login(String username, String psw){
+        userName.sendKeys(username);
+        password.sendKeys(psw);
+        submit.click();
+
+
+    }
+
 }
