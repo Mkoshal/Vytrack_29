@@ -8,11 +8,12 @@ import org.openqa.selenium.support.PageFactory;
 
 public class VyTrackLoginPage {
 
-    public VyTrackLoginPage(){
+    public VyTrackLoginPage() {
 
         PageFactory.initElements(Driver.getDriver(), this);
 
     }
+
     @FindBy(name = "_username")
     public WebElement userName;
 
@@ -27,8 +28,8 @@ public class VyTrackLoginPage {
         userName.sendKeys(username);
         password.sendKeys(ConfigurationReader.getProperty("password"));
         submit.click();
-    }
 
+    }
 
     }
 
