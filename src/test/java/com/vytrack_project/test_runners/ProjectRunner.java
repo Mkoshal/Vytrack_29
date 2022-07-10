@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/vytrack_project/step_definitions",
         dryRun = false,
-        tags = "@Login"
+        tags = "@ExportGridDropdown2"
 
 )
 
