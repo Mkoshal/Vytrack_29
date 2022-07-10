@@ -28,6 +28,9 @@ public class VyTrackLoginPage {
         userName.sendKeys(username);
         password.sendKeys(ConfigurationReader.getProperty("password"));
         submit.click();
+
     }
 
-}
+    }
+
+
