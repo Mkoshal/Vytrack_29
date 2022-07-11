@@ -14,21 +14,6 @@ public class ExportGridStepDefs2 {
     ExportGridDropdownPage2 exportGridDropdownPage2 = new ExportGridDropdownPage2();
     VyTrackLoginPage vyTrackLoginPage = new VyTrackLoginPage();
 
-
-    @Given("{string} is on Vehicles page")
-    public void is_on_vehicles_page(String user) {
-        Driver.getDriver().get(ConfigurationReader.getProperty("env"));
-        vyTrackLoginPage.login(user);
-        exportGridDropdownPage2.fleetModule.click();
-        exportGridDropdownPage2.vehicleModule.click();
-
-    }
-    @When("user clicks on Export Grid dropdown")
-    public void user_clicks_on_export_grid_dropdown() {
-        exportGridDropdownPage2.exportGridDropdown.click();
-
-
-    }
     @Then("user is able to see Export Grid Dropdown on the left of the page")
     public void user_is_able_to_see_export_grid_dropdown_on_the_left_of_the_page() {
         Assert.assertTrue(exportGridDropdownPage2.CSVGrid.isDisplayed());
