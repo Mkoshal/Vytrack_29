@@ -16,9 +16,9 @@ public class ExportGridStepDefs2 {
 
 
     @Given("{string} is on Vehicles page")
-    public void is_on_vehicles_page(String string) {
+    public void is_on_vehicles_page(String user) {
         Driver.getDriver().get(ConfigurationReader.getProperty("env"));
-        vyTrackLoginPage.login("user177", "UserUser123");
+        vyTrackLoginPage.login(user);
         exportGridDropdownPage2.fleetModule.click();
         exportGridDropdownPage2.vehicleModule.click();
 
