@@ -1,3 +1,4 @@
+@ExportGrid
 Feature: User should be able to click Export grid dropdown
 
   User Story: As a user when I am on Vytrack => Fleet => Vehicles,
@@ -15,5 +16,17 @@ Feature: User should be able to click Export grid dropdown
       | user177         |
       | storemanager210 |
       | salesmanager273 |
+
+  @B26G29-00
+  Scenario Outline: Locate export grid dropdown on the left of the page
+    Given "<user>" is on Vehicles page
+    When user looks for Export Grid dropdown
+    Then user should be able to see Export Grid dropdown on the left of the page
+    Examples:
+      | user            |
+      | user177         |
+      | storemanager210 |
+      | salesmanager273 |
+
 
 
