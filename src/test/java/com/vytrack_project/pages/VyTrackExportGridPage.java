@@ -46,6 +46,19 @@ public class VyTrackExportGridPage {
     @FindBy(xpath = "//div[@class='actions-panel pull-right form-horizontal']")
     public WebElement allBtn;
 
+    @FindBy(xpath = "//div[@class='flash-messages-holder']")
+    public WebElement messagePopUp;
+
+    @FindBy(css = "h1[class='oro-subtitle']")
+    public WebElement carsTitle;
+
+    public void clickOption(String option){
+        if(option.equals("CSV")){
+            CSVGrid.click();
+        } else {
+            XLSXGrid.click();
+        }
+    }
 
 
 }

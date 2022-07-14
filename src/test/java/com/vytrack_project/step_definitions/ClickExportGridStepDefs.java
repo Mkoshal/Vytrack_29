@@ -28,7 +28,6 @@ public class ClickExportGridStepDefs {
         vyTrackLoginPage.login(user);
         vyTrackExportGridPage.fleetModule.click();
         vyTrackExportGridPage.vehicleModule.click();
-
     }
 
     @When("user clicks on Export Grid dropdown")
@@ -57,5 +56,19 @@ public class ClickExportGridStepDefs {
     @Then("user should be able to see Export Grid dropdown on the left of the page")
     public void userShouldBeAbleToSeeExportGridDropdownOnTheLeftOfThePage() {
         Assert.assertTrue(xPos <= winWidth/2 && yPos <= winHeight/2);
+    }
+
+    @When("user clicks on Export Grid dropdown on the left of the page")
+    public void user_clicks_on_export_grid_dropdown_on_the_left_of_the_page() {
+       vyTrackExportGridPage.exportGridDropdown.click();
+    }
+    @When("user clicks on {string} option")
+    public void user_clicks_on_option(String option) {
+        vyTrackExportGridPage.clickOption(option);
+    }
+    @Then("user should see the message as Export started successfully. You will receive email notification upon completion.")
+    public void user_should_see_the_message_as_export_started_successfully_you_will_receive_email_notification_upon_completion() {
+        wait.until(ExpectedConditions.visibilityOf(vyTrackExportGridPage.messagePopUp));
+       Assert.assertTrue(vyTrackExportGridPage.messagePopUp.getText().contains("Export started successfully. You will receive email notification upon completion."));
     }
 }
