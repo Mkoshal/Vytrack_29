@@ -42,8 +42,6 @@ public class ClickExportGridStepDefs {
 
     }
 
-
-    }
     @Then("user should be able to see CSV and XLSX")
     public void user_should_be_able_to_see_csv_and_xlsx() {
 
